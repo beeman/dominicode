@@ -1,0 +1,22 @@
+module.exports = {
+  projects: [
+    '<rootDir>/apps/api',
+    '<rootDir>/apps/api-e2e',
+    '<rootDir>/libs/api/data-access-auth',
+    '<rootDir>/libs/api/feature-auth',
+    '<rootDir>/libs/api/data-access-core',
+    '<rootDir>/libs/api/feature-core',
+    '<rootDir>/apps/web',
+    '<rootDir>/libs/web/assets',
+    '<rootDir>/libs/web/data-access-auth',
+    '<rootDir>/libs/web/data-access-core',
+    '<rootDir>/libs/web/feature-about',
+    '<rootDir>/libs/web/feature-auth',
+    '<rootDir>/libs/web/feature-core',
+    '<rootDir>/libs/web/feature-dashboard',
+    '<rootDir>/libs/web/feature-shell',
+    '<rootDir>/libs/web/layout',
+    '<rootDir>/libs/web/style',
+    '<rootDir>/libs/web/ui-form',
+  ],
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "admin-feature",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "type": {
+      "type": "string",
+      "description": "Application",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": {
+        "message": "Which type of library would you like to create?",
+        "type": "list",
+        "items": [
+          {
+            "value": "shared",
+            "label": "Shared feature"
+          },
+          {
+            "value": "web",
+            "label": "Web feature"
+          }
+        ]
+      }
+    }
+  },
+  "required": ["name", "type"]
+}

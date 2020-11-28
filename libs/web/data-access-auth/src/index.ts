@@ -1,0 +1,6 @@
+export * from './lib/+state/auth/auth.actions'
+export * from './lib/+state/auth/auth.reducer'
+export * from './lib/+state/auth/auth.selectors'
+export * from './lib/guards/is-logged-in.guard'
+export * from './lib/web-data-access-auth.module'
+export * from './lib/web-data-access-auth.service'
