@@ -1,3 +1,6 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -9,13 +12,13 @@ generator client {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @default(now()) @updatedAt
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now()) @updatedAt
   role      Role
-  developer Boolean  @default(false)
-  email     String   @unique
-  username  String   @unique
+  developer Boolean   @default(false)
+  email     String    @unique
+  username  String    @unique
   password  String?
   firstName String?
   lastName  String?
@@ -23,9 +26,36 @@ model User {
   location  String?
   phone     String?
   bio       String?
+  posts     Post[]    @relation("PostsByUser")
+  liked     Post[]    @relation("LikedPostsByUser")
+  comments  Comment[] @relation("CommentsByUser")
 }
 
 enum Role {
   Admin
   User
+}
+
+model Post {
+  id           String    @id @default(cuid())
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @default(now()) @updatedAt
+  text         String
+  author       User      @relation("PostsByUser", fields: [authorId], references: [id])
+  authorId     String
+  comments     Comment[] @relation("CommentsByPost")
+  commentCount Int       @default(value: 0)
+  likedBy      User[]    @relation("LikedPostsByUser")
+  likeCount    Int       @default(value: 0)
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  text      String
+  post      Post     @relation("CommentsByPost", fields: [postId], references: [id])
+  postId    String
+  author    User     @relation("CommentsByUser", fields: [userId], references: [id])
+  userId    String
 }

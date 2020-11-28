@@ -2,13 +2,13 @@ import { chain, externalSchematic, Rule } from '@angular-devkit/schematics'
 
 export default function (schema: { name: string }): Rule {
   return chain([
-    externalSchematic('@nxpm/stack', 'admin-lib', {
+    externalSchematic('@nxpm/stack', 'api-lib', {
       name: schema.name,
       type: 'data-access',
       prefix: schema.name,
       directory: 'api',
     }),
-    externalSchematic('@nxpm/stack', 'admin-lib', {
+    externalSchematic('@nxpm/stack', 'api-lib', {
       name: schema.name,
       type: 'feature',
       prefix: schema.name,

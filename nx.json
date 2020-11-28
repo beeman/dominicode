@@ -29,7 +29,16 @@
     "api-data-access-auth": {
       "tags": ["scope:api", "type:data-access"]
     },
+    "api-data-access-comment": {
+      "tags": ["scope:api", "type:data-access"]
+    },
     "api-data-access-core": {
+      "tags": ["scope:api", "type:data-access"]
+    },
+    "api-data-access-post": {
+      "tags": ["scope:api", "type:data-access"]
+    },
+    "api-data-access-profile": {
       "tags": ["scope:api", "type:data-access"]
     },
     "api-e2e": {
@@ -38,7 +47,16 @@
     "api-feature-auth": {
       "tags": ["scope:api", "type:feature"]
     },
+    "api-feature-comment": {
+      "tags": ["scope:api", "type:feature"]
+    },
     "api-feature-core": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "api-feature-post": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "api-feature-profile": {
       "tags": ["scope:api", "type:feature"]
     },
     "web": {
@@ -51,6 +69,12 @@
       "tags": ["scope:web", "type:data-access"]
     },
     "web-data-access-core": {
+      "tags": ["scope:web", "type:data-access"]
+    },
+    "web-data-access-post": {
+      "tags": ["scope:web", "type:data-access"]
+    },
+    "web-data-access-profile": {
       "tags": ["scope:web", "type:data-access"]
     },
     "web-e2e": {
@@ -69,6 +93,12 @@
     "web-feature-dashboard": {
       "tags": ["scope:web", "type:feature"]
     },
+    "web-feature-post": {
+      "tags": ["scope:web", "type:feature"]
+    },
+    "web-feature-profile": {
+      "tags": ["scope:web", "type:feature"]
+    },
     "web-feature-shell": {
       "tags": ["scope:web", "type:feature"]
     },
@@ -79,6 +109,12 @@
       "tags": ["scope:web", "type:style"]
     },
     "web-ui-form": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-post": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-profile": {
       "tags": ["scope:web", "type:ui"]
     }
   }

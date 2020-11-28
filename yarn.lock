@@ -214,7 +214,7 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/forms@^10.1.0":
+"@angular/forms@^10.0.2", "@angular/forms@^10.1.0":
   version "10.2.3"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-10.2.3.tgz#1125a15024ec3c89bd7a97a11c41b1b03fbc1df7"
   integrity sha512-IcQ0xK+f84khGAs6cd0BUJIebFV3KQsVF9kbAX10bpPmleI62xI074mIefAiu3ZLEOm3OnhYDDZwrrk7UIrmow==
@@ -240,7 +240,7 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/router@^10.1.0":
+"@angular/router@^10.0.2", "@angular/router@^10.1.0":
   version "10.2.3"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-10.2.3.tgz#6507c58b61452a79172f47a7a34211c0fedfa55f"
   integrity sha512-QUVqEOai3hASeMgTXIVo9Ql6EGJ+v0QHs/O+5pFplXGAzMQDpCnrpOuB4FExWxdafiiYfKfLlNvxj0tEJ2gU0w==
@@ -2181,6 +2181,93 @@
   resolved "https://registry.yarnpkg.com/@kikstart-playground/graphql-intercom/-/graphql-intercom-1.4.1.tgz#3be03130668a2fec6169f107df52db788ff898bc"
   integrity sha512-WVe2xOXJIyTcgFxQmMHpnXHj/aYhh+eyC47mpjYVleToHQWIo79GU+RXbNuBN0t3rDPm3ldFMUPXkSmizHDc5Q==
 
+"@kikstart-ui/ui-avatar@2.2.0", "@kikstart-ui/ui-avatar@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kikstart-ui/ui-avatar/-/ui-avatar-2.2.0.tgz#00406212a6c774d66fd013ccdb2bfcf837d282bf"
+  integrity sha512-AxmdcN6aYPSO8QaC2vWdw5+CPtv0rdcucje+PC73W3fz4kQgRBq8wtsaCxKbEAKEcQPj0p43mkFWtPn5NzNNlA==
+  dependencies:
+    tslib "^2.0.0"
+
+"@kikstart-ui/ui-button@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kikstart-ui/ui-button/-/ui-button-2.2.0.tgz#eaaf5b51b8931daf2872b3b81fc7cbb601f5d476"
+  integrity sha512-33+6wLVr7fxQ6Ez2FMA7TAYakYI0F5gnJjf41a62sTLuou/PmMebFBC5AalYqGGI+1zPah5Sdc6MgFEJE9wodw==
+  dependencies:
+    "@angular/router" "^10.0.2"
+    "@kikstart-ui/ui-label" "2.2.0"
+    "@kikstart-ui/ui-link" "2.2.0"
+    "@kikstart-ui/ui-loading" "2.2.0"
+    tslib "^2.0.0"
+
+"@kikstart-ui/ui-card@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kikstart-ui/ui-card/-/ui-card-2.2.0.tgz#faf5b23b7754050384b8976287e510ba1658fbc1"
+  integrity sha512-CJaMOjqfKcL2l7qgaUCRzWQCmFMQ4vwL0Byoj1/SkhT5aPyjuqBY+yIAtQHLIaQ3iZRMskUPCfDuhVWxBK4G5Q==
+  dependencies:
+    "@angular/router" "^10.0.2"
+    "@kikstart-ui/ui-button" "2.2.0"
+    "@kikstart-ui/ui-label" "2.2.0"
+    "@kikstart-ui/ui-link" "2.2.0"
+    "@kikstart-ui/ui-loading" "2.2.0"
+    tslib "^2.0.0"
+
+"@kikstart-ui/ui-comment@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kikstart-ui/ui-comment/-/ui-comment-2.2.0.tgz#8d66c1925684f5ee8080dfb99a13f8da54cb38f0"
+  integrity sha512-64ZnU+cyEsDiB36/ipWjlEvd31XZ773+47pWaEozGX94O2lF0wTxbA1PJscByEhaNDBoespnnECPFgN356AveQ==
+  dependencies:
+    "@angular/forms" "^10.0.2"
+    "@angular/router" "^10.0.2"
+    "@kikstart-ui/ui-avatar" "2.2.0"
+    "@kikstart-ui/ui-button" "2.2.0"
+    "@kikstart-ui/ui-form" "2.2.0"
+    "@kikstart-ui/ui-label" "2.2.0"
+    "@kikstart-ui/ui-link" "2.2.0"
+    "@kikstart-ui/ui-loading" "2.2.0"
+    "@ngx-formly/bootstrap" "^5.8.0"
+    "@ngx-formly/core" "^5.8.0"
+    lodash-es "^4.17.15"
+    ngx-bootstrap "^5.6.1"
+    ngx-timeago "^1.0.4"
+    rxjs "~6.5.5"
+    tslib "^2.0.0"
+
+"@kikstart-ui/ui-form@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kikstart-ui/ui-form/-/ui-form-2.2.0.tgz#cd4ed0680bca7b67b292bf9c505b8c85c9bcc358"
+  integrity sha512-LHq412BHbWX3ifHZbaAFLXgXmcIxc7hKO6rYOrd3Jb6Apg4tb/P1nm6u6D3kmyl7zkvk3/wz0bQisS2q+2BI8A==
+  dependencies:
+    "@angular/forms" "^10.0.2"
+    "@ngx-formly/bootstrap" "^5.8.0"
+    "@ngx-formly/core" "^5.8.0"
+    lodash-es "^4.17.15"
+    ngx-bootstrap "^5.6.1"
+    rxjs "~6.5.5"
+    tslib "^2.0.0"
+
+"@kikstart-ui/ui-label@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kikstart-ui/ui-label/-/ui-label-2.2.0.tgz#27cb7a20c9320fd3e851c9940d6e0a3c1b6ae403"
+  integrity sha512-sjF+LviwJ+Rx5TYlU1brk/FyBeBS7VJuRyb/G9wK6NudbstrOMcQYI7rf+lRFLs78DqfHarGua0Ancr1lQJGug==
+  dependencies:
+    tslib "^2.0.0"
+
+"@kikstart-ui/ui-link@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kikstart-ui/ui-link/-/ui-link-2.2.0.tgz#195b2dc141bd8ce257e35ed72b6019bb7fab646d"
+  integrity sha512-vo6ta3SXJZzzUeQ3oUhy9nB9cIkuxq1FQ/f5Z+UkwhVuNfxJUMhHXQzXmcr8bEnyQ4fA6UuFJHjQlhf9n0quhg==
+  dependencies:
+    "@angular/router" "^10.0.2"
+    "@kikstart-ui/ui-label" "2.2.0"
+    tslib "^2.0.0"
+
+"@kikstart-ui/ui-loading@2.2.0", "@kikstart-ui/ui-loading@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kikstart-ui/ui-loading/-/ui-loading-2.2.0.tgz#1b28058ccd9c78761db3e10974db3a050d31e59d"
+  integrity sha512-ymULh3U0PmsqAhDPKcPkqrvMnJoLBSgJLL7m8MnO+7GkuTZWd0Oc6Nju8Egi3wJ8DCcOMWZPmN3bysSX/TqZAA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@nestjs/common@^7.0.0":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-7.5.5.tgz#9c8bfcbe32ef7768d87cb458084271f7e38cc32e"
@@ -2341,10 +2428,24 @@
   dependencies:
     tslib "^1.9.0"
 
+"@ngx-formly/bootstrap@^5.8.0":
+  version "5.10.6"
+  resolved "https://registry.yarnpkg.com/@ngx-formly/bootstrap/-/bootstrap-5.10.6.tgz#de111a87c44ca873714b90bf9943db8af4143e6e"
+  integrity sha512-sjHahI47VVlEscwlJHUE/5/5Qqz7AiyYJ6g8NgGs767ZuPaHfE/SJrlVE70WMlGjEFRlmCOm4Q0r4pgIunQyaw==
+  dependencies:
+    tslib "^1.9.0"
+
 "@ngx-formly/core@5.10.3":
   version "5.10.3"
   resolved "https://registry.yarnpkg.com/@ngx-formly/core/-/core-5.10.3.tgz#fbe0cb44d73793a22381c682f49ba269b0eaa6dd"
   integrity sha512-dCYqTy5lRGpeFY6edAjLwPh3z1vhwpx1wIzFLngCycN/MpPIhwJ3eEsCOlx6CWmPb2QteXn6CL4dG+xhN2JfDA==
+  dependencies:
+    tslib "^1.7.1"
+
+"@ngx-formly/core@^5.8.0":
+  version "5.10.6"
+  resolved "https://registry.yarnpkg.com/@ngx-formly/core/-/core-5.10.6.tgz#3afca57ee7848945d64b0e0bc4b41b100f7c27a2"
+  integrity sha512-ylU1OS9ZTm/xLCZQu+GDqDCUwvpe0L6f2mLtEKaBmlnhvjbdS0l2DE2Tf6FGE6SGi4VF+OCqvaE3X59N+84llw==
   dependencies:
     tslib "^1.7.1"
 
@@ -9643,6 +9744,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash-es@^4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
+  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+
 lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
@@ -10305,6 +10411,23 @@ next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
+
+ngx-bootstrap@^5.6.1:
+  version "5.6.2"
+  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-5.6.2.tgz#e648f826d303c29255c16772676efd30695740d1"
+  integrity sha512-6YHXtdXkGH3w0NQoaUgNYAcrj064Lv5RTO284ha/hvpNTrh55yQz2cVh0VvwBk3MjyY2tdmLH4SuCJDszYdYiw==
+
+ngx-bootstrap@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-6.2.0.tgz#678b274dabfda31411eb1234c981d1967750d890"
+  integrity sha512-5WKHo6/ltkenw4UyXZwED8rODCgp2RGbWurzYzZsF/gH1JO5SN7TJ+AL6kXYk6XM42sDA2WhN9Db+ZPNjiyHnA==
+
+ngx-timeago@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/ngx-timeago/-/ngx-timeago-1.0.4.tgz#351514242c1ad637f8d76693a1dba720cc699285"
+  integrity sha512-/UkF2ETQBRdJ2k3xFoI8uNXNqrzWll2gZB17Ear1pvKyQ0bJczYY4qPa5IzSqurLLTmNxOK447+RMxeuXX+mrQ==
+  dependencies:
+    tslib "^1.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"

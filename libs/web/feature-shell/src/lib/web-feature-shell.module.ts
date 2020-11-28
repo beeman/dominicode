@@ -21,6 +21,10 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () => import('@dominicode/web/feature-dashboard').then((m) => m.WebFeatureDashboardModule),
       },
+      {
+        path: 'posts',
+        loadChildren: () => import('@dominicode/web/feature-post').then((m) => m.WebFeaturePostModule),
+      },
     ],
   },
   {

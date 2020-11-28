@@ -2,6 +2,23 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Comment {
+  author: Profile
+  created: DateTime
+  id: String
+  post: [Comment!]!
+  text: String
+}
+
+input CreateCommentInput {
+  postId: String!
+  text: String!
+}
+
+input CreatePostInput {
+  text: String!
+}
+
 """
 A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 """
@@ -24,15 +41,46 @@ input LoginInput {
 }
 
 type Mutation {
+  createComment(data: CreateCommentInput!): Comment!
+  createPost(data: CreatePostInput!): Post
+  deleteComment(id: String!): Comment!
+  deletePost(id: String!): Post
   intercomPub(payload: JSON, scope: String, type: String!): IntercomMessage
   login(input: LoginInput!): UserToken
   logout: Boolean
   register(input: RegisterInput!): UserToken
 }
 
+type Post {
+  author: Profile!
+  commentCount: Float
+  commentedBy: [Profile!]
+  comments: [Comment!]
+  created: DateTime
+  id: String
+  text: String
+}
+
+type Profile {
+  avatarUrl: String
+  bio: String
+  created: DateTime
+  id: String
+  location: String
+  name: String
+  posts: Post
+  username: String
+}
+
 type Query {
+  comments(postId: String!): [Comment!]!
   me: User
+  post(id: String!): Post
+  posts: [Post!]
+  profile(username: String!): Profile
+  profiles: [Profile!]
   uptime: Float
+  userPosts(userId: String!): [Post!]
 }
 
 input RegisterInput {

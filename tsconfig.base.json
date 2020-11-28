@@ -18,20 +18,32 @@
     "paths": {
       "@dominicode/api-app-module": ["apps/api/src/app/app.module.ts"],
       "@dominicode/api/data-access-auth": ["libs/api/data-access-auth/src/index.ts"],
+      "@dominicode/api/data-access-comment": ["libs/api/data-access-comment/src/index.ts"],
       "@dominicode/api/data-access-core": ["libs/api/data-access-core/src/index.ts"],
+      "@dominicode/api/data-access-post": ["libs/api/data-access-post/src/index.ts"],
+      "@dominicode/api/data-access-profile": ["libs/api/data-access-profile/src/index.ts"],
       "@dominicode/api/feature-auth": ["libs/api/feature-auth/src/index.ts"],
+      "@dominicode/api/feature-comment": ["libs/api/feature-comment/src/index.ts"],
       "@dominicode/api/feature-core": ["libs/api/feature-core/src/index.ts"],
+      "@dominicode/api/feature-post": ["libs/api/feature-post/src/index.ts"],
+      "@dominicode/api/feature-profile": ["libs/api/feature-profile/src/index.ts"],
       "@dominicode/web/assets": ["libs/web/assets/src/index.ts"],
       "@dominicode/web/data-access-auth": ["libs/web/data-access-auth/src/index.ts"],
       "@dominicode/web/data-access-core": ["libs/web/data-access-core/src/index.ts"],
+      "@dominicode/web/data-access-post": ["libs/web/data-access-post/src/index.ts"],
+      "@dominicode/web/data-access-profile": ["libs/web/data-access-profile/src/index.ts"],
       "@dominicode/web/feature-about": ["libs/web/feature-about/src/index.ts"],
       "@dominicode/web/feature-auth": ["libs/web/feature-auth/src/index.ts"],
       "@dominicode/web/feature-core": ["libs/web/feature-core/src/index.ts"],
       "@dominicode/web/feature-dashboard": ["libs/web/feature-dashboard/src/index.ts"],
+      "@dominicode/web/feature-post": ["libs/web/feature-post/src/index.ts"],
+      "@dominicode/web/feature-profile": ["libs/web/feature-profile/src/index.ts"],
       "@dominicode/web/feature-shell": ["libs/web/feature-shell/src/index.ts"],
       "@dominicode/web/layout": ["libs/web/layout/src/index.ts"],
       "@dominicode/web/style": ["libs/web/style/src/index.ts"],
-      "@dominicode/web/ui-form": ["libs/web/ui-form/src/index.ts"]
+      "@dominicode/web/ui-form": ["libs/web/ui-form/src/index.ts"],
+      "@dominicode/web/ui-post": ["libs/web/ui-post/src/index.ts"],
+      "@dominicode/web/ui-profile": ["libs/web/ui-profile/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

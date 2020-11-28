@@ -72,6 +72,27 @@
         }
       }
     },
+    "api-data-access-comment": {
+      "root": "libs/api/data-access-comment",
+      "sourceRoot": "libs/api/data-access-comment/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/data-access-comment/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/data-access-comment/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "api-data-access-core": {
       "root": "libs/api/data-access-core",
       "sourceRoot": "libs/api/data-access-core/src",
@@ -88,6 +109,48 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/api/data-access-core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-data-access-post": {
+      "root": "libs/api/data-access-post",
+      "sourceRoot": "libs/api/data-access-post/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/data-access-post/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/data-access-post/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-data-access-profile": {
+      "root": "libs/api/data-access-profile",
+      "sourceRoot": "libs/api/data-access-profile/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/data-access-profile/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/data-access-profile/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -138,6 +201,27 @@
         }
       }
     },
+    "api-feature-comment": {
+      "root": "libs/api/feature-comment",
+      "sourceRoot": "libs/api/feature-comment/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/feature-comment/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/feature-comment/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "api-feature-core": {
       "root": "libs/api/feature-core",
       "sourceRoot": "libs/api/feature-core/src",
@@ -154,6 +238,48 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/api/feature-core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-feature-post": {
+      "root": "libs/api/feature-post",
+      "sourceRoot": "libs/api/feature-post/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/feature-post/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/feature-post/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-feature-profile": {
+      "root": "libs/api/feature-profile",
+      "sourceRoot": "libs/api/feature-profile/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/api/feature-profile/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/feature-profile/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -326,6 +452,63 @@
         }
       }
     },
+    "web-data-access-post": {
+      "projectType": "library",
+      "root": "libs/web/data-access-post",
+      "sourceRoot": "libs/web/data-access-post/src",
+      "prefix": "post",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/web/data-access-post/tsconfig.lib.json", "libs/web/data-access-post/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/web/data-access-post/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web/data-access-post/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "web-data-access-profile": {
+      "projectType": "library",
+      "root": "libs/web/data-access-profile",
+      "sourceRoot": "libs/web/data-access-profile/src",
+      "prefix": "profile",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/web/data-access-profile/tsconfig.lib.json",
+              "libs/web/data-access-profile/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/web/data-access-profile/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web/data-access-profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
     "web-e2e": {
       "root": "apps/web-e2e",
       "sourceRoot": "apps/web-e2e/src",
@@ -464,6 +647,60 @@
         }
       }
     },
+    "web-feature-post": {
+      "projectType": "library",
+      "root": "libs/web/feature-post",
+      "sourceRoot": "libs/web/feature-post/src",
+      "prefix": "post",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/web/feature-post/tsconfig.lib.json", "libs/web/feature-post/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/web/feature-post/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web/feature-post/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "web-feature-profile": {
+      "projectType": "library",
+      "root": "libs/web/feature-profile",
+      "sourceRoot": "libs/web/feature-profile/src",
+      "prefix": "profile",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/web/feature-profile/tsconfig.lib.json", "libs/web/feature-profile/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/web/feature-profile/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web/feature-profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
     "web-feature-shell": {
       "projectType": "library",
       "root": "libs/web/feature-shell",
@@ -547,6 +784,60 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/web/ui-form/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "web-ui-post": {
+      "projectType": "library",
+      "root": "libs/web/ui-post",
+      "sourceRoot": "libs/web/ui-post/src",
+      "prefix": "post",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/web/ui-post/tsconfig.lib.json", "libs/web/ui-post/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/web/ui-post/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web/ui-post/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "web-ui-profile": {
+      "projectType": "library",
+      "root": "libs/web/ui-profile",
+      "sourceRoot": "libs/web/ui-profile/src",
+      "prefix": "profile",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/web/ui-profile/tsconfig.lib.json", "libs/web/ui-profile/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/web/ui-profile/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web/ui-profile/jest.config.js",
             "passWithNoTests": true
           }
         }
