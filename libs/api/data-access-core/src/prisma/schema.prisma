@@ -23,7 +23,8 @@ model User {
   firstName String?
   lastName  String?
   avatarUrl String?
-  location  String?
+  // TODO: Implement location field
+  //  location  String?  @default("Unknown")
   phone     String?
   bio       String?
   posts     Post[]    @relation("PostsByUser")

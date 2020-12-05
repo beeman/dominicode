@@ -65,8 +65,9 @@ type Profile {
   avatarUrl: String
   bio: String
   created: DateTime
+  firstName: String
   id: String
-  location: String
+  lastName: String
   name: String
   posts: Post
   username: String
@@ -112,6 +113,7 @@ type User {
   id: String
   lastName: String
   location: String
+  name: String
   phone: String
   role: Role
   updatedAt: DateTime

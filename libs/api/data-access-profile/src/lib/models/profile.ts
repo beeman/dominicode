@@ -12,7 +12,10 @@ export class Profile {
   username?: string
 
   @Field({ nullable: true })
-  name?: string
+  firstName?: string
+
+  @Field({ nullable: true })
+  lastName?: string
 
   @Field({ nullable: true })
   avatarUrl?: string
@@ -20,6 +23,7 @@ export class Profile {
   @Field({ nullable: true })
   bio?: string
 
-  @Field({ nullable: true })
-  location?: string
+  // TODO: Implement location field
+  // @Field({ nullable: true })
+  // location?: string
 }

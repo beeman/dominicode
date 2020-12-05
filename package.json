@@ -7,7 +7,7 @@
     "build:web": "nx build web --prod",
     "sdk:web": "graphql-codegen --config libs/web/data-access-core/src/codegen.yml",
     "sdk:web:watch": "yarn sdk:web --watch",
-    "dev:api": "yarn prisma:generate && nx serve api",
+    "dev:api": "nx serve api",
     "build:api": "nx build api --prod",
     "setup": "yarn prisma:apply",
     "prisma:apply": "yarn prisma:format && yarn prisma db push --preview-feature",

@@ -11,8 +11,7 @@ const routes: Routes = [
     component: WebLayoutComponent,
     canActivate: [IsLoggedInGuard],
     children: [
-      // Application routes here
-      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+      { path: '', pathMatch: 'full', redirectTo: 'posts' },
       {
         path: 'about',
         loadChildren: () => import('@dominicode/web/feature-about').then((m) => m.WebFeatureAboutModule),
@@ -24,6 +23,10 @@ const routes: Routes = [
       {
         path: 'posts',
         loadChildren: () => import('@dominicode/web/feature-post').then((m) => m.WebFeaturePostModule),
+      },
+      {
+        path: 'profiles',
+        loadChildren: () => import('@dominicode/web/feature-profile').then((m) => m.WebFeatureProfileModule),
       },
     ],
   },

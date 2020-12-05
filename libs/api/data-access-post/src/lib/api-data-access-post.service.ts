@@ -14,7 +14,7 @@ export class ApiDataAccessPostService {
   }
 
   post({ id }) {
-    return this.data.post.findOne({ where: { id } })
+    return this.data.post.findUnique({ where: { id } })
   }
 
   createPost(userId, data) {
@@ -27,7 +27,7 @@ export class ApiDataAccessPostService {
   }
 
   async deletePost(userId: string, id: string) {
-    const author = await this.data.post.findOne({ where: { id } }).author()
+    const author = await this.data.post.findUnique({ where: { id } }).author()
     if (author.id !== userId) {
       throw new Error('You can only delete your own posts.')
     }
@@ -35,10 +35,10 @@ export class ApiDataAccessPostService {
   }
 
   postAuthor(id: string) {
-    return this.data.post.findOne({ where: { id } }).author()
+    return this.data.post.findUnique({ where: { id } }).author()
   }
 
   postComments(id: string) {
-    return this.data.post.findOne({ where: { id } }).comments()
+    return this.data.post.findUnique({ where: { id } }).comments()
   }
 }

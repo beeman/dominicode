@@ -20,7 +20,7 @@ import { switchMap, tap } from 'rxjs/operators'
         </ng-container>
         <ui-loading [loading]="loading && (!comments || !comments.length)"></ui-loading>
         <div *ngIf="!loading && !comments.length">
-          <div class="text-center py-5">Nobody commented yet...</div>
+          <div class="text-center py-3 py-md-5">Nobody commented yet...</div>
         </div>
         <ng-container *ngIf="author$ | async as author">
           <hr />

@@ -24,7 +24,7 @@ import { Component } from '@angular/core'
 })
 export class WebLayoutComponent {
   appLogo = '/assets/images/logo.png'
-  appName = 'Web'
+  appName = 'PANNG Stack'
   footerHtml = `Copyright &copy; ${new Date().getFullYear()}`
   linksLeft: { label: string; route: string }[] = [
     { label: 'Dashboard', route: '/dashboard' },

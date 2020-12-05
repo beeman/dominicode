@@ -4,13 +4,13 @@ import { Component, Input } from '@angular/core'
   selector: 'layout-header',
   template: `
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" routerLink="/">
+      <a class="navbar-brand d-flex align-items-center" routerLink="/">
         <img
           *ngIf="logo"
           [attr.src]="logo"
           width="30"
           height="30"
-          class="d-inline-block align-top mr-2"
+          class="d-inline-block align-top mr-3 ml-2"
           alt="App Logo"
           loading="lazy"
         />

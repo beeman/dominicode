@@ -1,22 +1,17 @@
-import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { RouterModule } from '@angular/router'
+import { NgModule } from '@angular/core'
+import { RouterModule, Routes } from '@angular/router'
+import { UiAvatarModule } from '@kikstart-ui/ui-avatar'
+import { UiLoadingModule } from '@kikstart-ui/ui-loading'
+import { ProfileCardComponent } from './components/profile-card.component'
+import { ProfileDetailComponent } from './containers/profile-detail.component'
+import { WebFeatureProfileService } from './web-feature-profile.service'
+
+const routes: Routes = [{ path: ':username', component: ProfileDetailComponent }]
 
 @NgModule({
-  imports: [
-    CommonModule,
-
-    RouterModule.forChild([
-      {
-        path: 'list',
-        loadChildren: () => import('./profile-list/profile-list.module').then((m) => m.ProfileListModule),
-      },
-      {
-        path: 'detail',
-        loadChildren: () => import('./profile-detail/profile-detail.module').then((m) => m.ProfileDetailModule),
-      },
-      /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
-    ]),
-  ],
+  imports: [CommonModule, RouterModule.forChild(routes), UiAvatarModule, UiLoadingModule],
+  providers: [WebFeatureProfileService],
+  declarations: [ProfileCardComponent, ProfileDetailComponent],
 })
 export class WebFeatureProfileModule {}

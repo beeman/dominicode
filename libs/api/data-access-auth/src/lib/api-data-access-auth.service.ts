@@ -72,7 +72,6 @@ export class ApiDataAccessAuthService {
   }
 
   async createUser(input: Partial<UserCreateInput>) {
-    const submittedPassword = !!input.password
     const password = input.password
     const hashedPassword = hashPassword(password)
     const email = input.email.trim()

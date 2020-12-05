@@ -7,8 +7,8 @@ import {
   User,
   UserToken,
 } from '@dominicode/api/data-access-auth'
-import { Float, Context, Query, Resolver, Mutation, Args, ResolveField, Parent } from '@nestjs/graphql'
 import { UseGuards } from '@nestjs/common'
+import { Args, Context, Mutation, Parent, Query, ResolveField, Resolver } from '@nestjs/graphql'
 
 @Resolver(() => UserToken)
 export class ApiFeatureAuthResolver {

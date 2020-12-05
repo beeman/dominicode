@@ -107,8 +107,9 @@ export type Profile = {
   avatarUrl?: Maybe<Scalars['String']>
   bio?: Maybe<Scalars['String']>
   created?: Maybe<Scalars['DateTime']>
+  firstName?: Maybe<Scalars['String']>
   id?: Maybe<Scalars['String']>
-  location?: Maybe<Scalars['String']>
+  lastName?: Maybe<Scalars['String']>
   name?: Maybe<Scalars['String']>
   posts?: Maybe<Post>
   username?: Maybe<Scalars['String']>
@@ -178,6 +179,7 @@ export type User = {
   id?: Maybe<Scalars['String']>
   lastName?: Maybe<Scalars['String']>
   location?: Maybe<Scalars['String']>
+  name?: Maybe<Scalars['String']>
   phone?: Maybe<Scalars['String']>
   role?: Maybe<Role>
   updatedAt?: Maybe<Scalars['DateTime']>
@@ -197,7 +199,7 @@ export type UserTokenDetailsFragment = { __typename?: 'UserToken' } & Pick<UserT
 
 export type UserDetailsFragment = { __typename?: 'User' } & Pick<
   User,
-  'id' | 'firstName' | 'lastName' | 'username' | 'avatarUrl' | 'email'
+  'id' | 'firstName' | 'lastName' | 'name' | 'username' | 'avatarUrl' | 'email'
 >
 
 export type MeQueryVariables = Exact<{ [key: string]: never }>
@@ -311,7 +313,7 @@ export type CreateCommentMutation = { __typename?: 'Mutation' } & {
 
 export type ProfileDetailsFragment = { __typename?: 'Profile' } & Pick<
   Profile,
-  'id' | 'username' | 'avatarUrl' | 'name' | 'bio' | 'location'
+  'id' | 'username' | 'avatarUrl' | 'name' | 'bio'
 >
 
 export type ProfilesQueryVariables = Exact<{ [key: string]: never }>
@@ -337,6 +339,7 @@ export const UserDetailsFragmentDoc = gql`
     id
     firstName
     lastName
+    name
     username
     avatarUrl
     email
@@ -396,7 +399,6 @@ export const ProfileDetailsFragmentDoc = gql`
     avatarUrl
     name
     bio
-    location
   }
 `
 export const MeDocument = gql`

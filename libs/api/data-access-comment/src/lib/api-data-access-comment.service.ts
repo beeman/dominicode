@@ -15,7 +15,7 @@ export class ApiDataAccessCommentService {
   }
 
   comment({ id }) {
-    return this.data.comment.findOne({ where: { id } })
+    return this.data.comment.findUnique({ where: { id } })
   }
 
   async createComment(userId: string, { postId, text }: CreateCommentInput) {
@@ -26,13 +26,13 @@ export class ApiDataAccessCommentService {
         text,
       },
     })
-    const post = await this.data.post.findOne({ where: { id: postId } })
+    const post = await this.data.post.findUnique({ where: { id: postId } })
     await this.data.post.update({ where: { id: postId }, data: { commentCount: post.commentCount + 1 } })
     return comment
   }
 
   async deleteComment(userId: string, id: string) {
-    const author = await this.data.comment.findOne({ where: { id } }).author()
+    const author = await this.data.comment.findUnique({ where: { id } }).author()
     if (author.id !== userId) {
       throw new Error('You can only delete your own comments.')
     }
@@ -40,10 +40,10 @@ export class ApiDataAccessCommentService {
   }
 
   commentAuthor(id: string) {
-    return this.data.comment.findOne({ where: { id } }).author()
+    return this.data.comment.findUnique({ where: { id } }).author()
   }
 
   commentPost(id: string) {
-    return this.data.comment.findOne({ where: { id } }).post()
+    return this.data.comment.findUnique({ where: { id } }).post()
   }
 }

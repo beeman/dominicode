@@ -20,4 +20,10 @@ export class ApiFeatureProfileResolver {
   posts(@Parent() profile) {
     return profile?.posts
   }
+
+  @ResolveField(() => String, { nullable: true })
+  name(@Parent() user: Profile) {
+    const name = [user.firstName, user.lastName].join(' ').trim()
+    return name ? name : user.username
+  }
 }

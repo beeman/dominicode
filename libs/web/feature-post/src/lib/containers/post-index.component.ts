@@ -11,7 +11,7 @@ import { WebFeaturePostService } from '../web-feature-post.service'
 
 @Component({
   template: `
-    <div class="container pt-5">
+    <div class="container pt-3 pt-md-5">
       <div class="row">
         <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
           <div class="mb-3 list-group-item" *ngIf="author$ | async as author">
